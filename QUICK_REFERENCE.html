@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beryl's Portfolio - Quick Links and Information">
+    <title>Portfolio Quick Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2a3a 50%, #0d3b66 100%);
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            background: linear-gradient(135deg, #00f7ff, #78e693);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+        .section {
+            background: rgba(0, 247, 255, 0.05);
+            border: 1px solid rgba(0, 247, 255, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #00f7ff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #78e693;
+            padding-bottom: 10px;
+        }
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .file-item {
+            background: rgba(0, 247, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #78e693;
+        }
+        .file-item strong {
+            color: #00f7ff;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .file-item small {
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .quick-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00f7ff, #00d4cc);
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .quick-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 247, 255, 0.3);
+        }
+        .info-box {
+            background: rgba(120, 230, 147, 0.1);
+            border: 1px solid #78e693;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .info-box strong {
+            color: #78e693;
+        }
+        .checklist {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .checklist li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            color: #00f7ff;
+            font-size: 1.2rem;
+        }
+        .checklist li.done::before {
+            content: '☑';
+            color: #78e693;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .section h2 {
+                font-size: 1.2rem;
+            }
+            .file-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Portfolio Quick Reference</h1>
+
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <div class="quick-links">
+                <a href="index.html">🏠 Go to Portfolio</a>
+                <a href="resume.html">📄 View Resume</a>
+                <a href="README.md" download>📖 Download Guide</a>
+            </div>
+            <div class="info-box">
+                <strong>💡 Tip:</strong> Start by opening <code>index.html</code> in your browser to see the full portfolio.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📁 File Overview</h2>
+            <div class="file-list">
+                <div class="file-item">
+                    <strong>index.html</strong>
+                    <small>Main portfolio homepage</small>
+                </div>
+                <div class="file-item">
+                    <strong>resume.html</strong>
+                    <small>Professional resume page</small>
+                </div>
+                <div class="file-item">
+                    <strong>iot-example.html</strong>
+                    <small>IoT Project case study</small>
+                </div>
+                <div class="file-item">
+                    <strong>database-app.html</strong>
+                    <small>Database app case study</small>
+                </div>
+                <div class="file-item">
+                    <strong>abi.html</strong>
+                    <small>Calculator project case study</small>
+                </div>
+                <div class="file-item">
+                    <strong>contact-confirm.html</strong>
+                    <small>Contact form confirmation</small>
+                </div>
+                <div class="file-item">
+                    <strong>style-modern.css</strong>
+                    <small>Main stylesheet (modern theme)</small>
+                </div>
+                <div class="file-item">
+                    <strong>README.md</strong>
+                    <small>Complete documentation</small>
+                </div>
+                <div class="file-item">
+                    <strong>SETUP_GUIDE.md</strong>
+                    <small>Customization instructions</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Customization Checklist</h2>
+            <ul class="checklist">
+                <li>Update your name (replace "Beryl")</li>
+                <li>Add your profile photo (photo.png)</li>
+                <li>Update email address</li>
+                <li>Update phone number</li>
+                <li>Update location</li>
+                <li>Add social media links (GitHub, LinkedIn, Twitter)</li>
+                <li>Customize skills section</li>
+                <li>Update project information</li>
+                <li>Add your projects' case study pages</li>
+                <li>Update resume with your info</li>
+                <li>Test on mobile devices</li>
+                <li>Deploy to hosting platform</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎨 Design Customization</h2>
+            <div class="file-list">
+                <div class="file-item">
+                    <strong>Primary Color</strong>
+                    <small>#00f7ff (Cyan)</small>
+                </div>
+                <div class="file-item">
+                    <strong>Secondary Color</strong>
+                    <small>#78e693 (Green)</small>
+                </div>
+                <div class="file-item">
+                    <strong>Background</strong>
+                    <small>#0f1419 (Dark Blue)</small>
+                </div>
+                <div class="file-item">
+                    <strong>Font</strong>
+                    <small>Poppins, Segoe UI</small>
+                </div>
+            </div>
+            <p style="margin-top: 15px; color: #ccc;">
+                Edit colors in <code>style-modern.css</code> by searching for the hex color codes above.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Project Links</h2>
+            <div class="quick-links">
+                <a href="iot-example.html">🔌 IoT Project</a>
+                <a href="database-app.html">🗄️ Database App</a>
+                <a href="abi.html">🧮 Calculator</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📞 Contact Information</h2>
+            <div class="info-box">
+                <p><strong>Email:</strong> beryl@example.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Location:</strong> Your City, Country</p>
+            </div>
+            <div class="info-box" style="margin-top: 15px;">
+                <strong>📝 Update these in:</strong><br>
+                - index.html (contact section)<br>
+                - resume.html (header)<br>
+                - All project case study pages
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Deployment Options</h2>
+            <div class="file-list">
+                <div class="file-item">
+                    <strong>GitHub Pages</strong>
+                    <small>Free, great for portfolios</small>
+                </div>
+                <div class="file-item">
+                    <strong>Netlify</strong>
+                    <small>Simple setup, great performance</small>
+                </div>
+                <div class="file-item">
+                    <strong>Vercel</strong>
+                    <small>Fast, reliable hosting</small>
+                </div>
+                <div class="file-item">
+                    <strong>Your Server</strong>
+                    <small>Full control, requires setup</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📚 Resources & Tips</h2>
+            <ul style="list-style: none; margin-top: 15px;">
+                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #00f7ff;">📖</span>
+                    Read <strong>README.md</strong> for complete documentation
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #00f7ff;">🎨</span>
+                    Check <strong>SETUP_GUIDE.md</strong> for customization details
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #00f7ff;">🔍</span>
+                    Use browser DevTools (F12) to test responsive design
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #00f7ff;">✨</span>
+                    Test on real mobile devices before deployment
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #00f7ff;">🔐</span>
+                    For contact forms, use Formspree or EmailJS
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>❓ Common Questions</h2>
+            <details style="margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #00f7ff; font-weight: 600;">How do I change my name throughout the portfolio?</summary>
+                <p style="margin-top: 10px; color: #ddd;">Use Find & Replace (Ctrl+H) in your text editor to replace "Beryl" with your name in all HTML files.</p>
+            </details>
+            <details style="margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #00f7ff; font-weight: 600;">How do I add a new project?</summary>
+                <p style="margin-top: 10px; color: #ddd;">Create a new HTML file (like project-name.html), copy the structure from iot-example.html, and add it to the projects section in index.html.</p>
+            </details>
+            <details style="margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #00f7ff; font-weight: 600;">Can I change the colors?</summary>
+                <p style="margin-top: 10px; color: #ddd;">Yes! Edit style-modern.css and replace #00f7ff (cyan) and #78e693 (green) with your desired colors.</p>
+            </details>
+            <details style="margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #00f7ff; font-weight: 600;">How do I make the contact form work?</summary>
+                <p style="margin-top: 10px; color: #ddd;">Use a service like Formspree.io or EmailJS. Check SETUP_GUIDE.md for detailed instructions.</p>
+            </details>
+        </div>
+
+        <div class="section" style="text-align: center;">
+            <h2>🎉 You're All Set!</h2>
+            <p style="margin-top: 15px; color: #ccc;">
+                Your modern portfolio is ready to customize. Follow the checklist above to personalize it with your information and projects.
+            </p>
+            <div class="quick-links" style="justify-content: center; margin-top: 20px;">
+                <a href="index.html">View Your Portfolio</a>
+                <a href="README.md" download>Download Documentation</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

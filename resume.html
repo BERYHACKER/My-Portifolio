@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beryl — Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+    .resume-container { max-width: 850px; margin: 20px auto; background: #fff; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    header { border-bottom: 3px solid #00f7ff; padding-bottom: 20px; margin-bottom: 25px; }
+    .name { font-size: 32px; font-weight: 700; color: #00f7ff; }
+    .title { font-size: 16px; color: #666; margin: 5px 0; }
+    .contact { display: flex; gap: 20px; font-size: 13px; color: #666; margin-top: 10px; flex-wrap: wrap; }
+    .contact-item { display: flex; align-items: center; gap: 5px; }
+    section { margin-bottom: 25px; }
+    h2 { font-size: 16px; font-weight: 700; color: #00f7ff; text-transform: uppercase; border-bottom: 2px solid #78e693; padding-bottom: 8px; margin-bottom: 12px; }
+    .entry { margin-bottom: 15px; }
+    .entry-title { font-weight: 700; font-size: 14px; color: #000; }
+    .entry-subtitle { font-size: 13px; color: #00f7ff; margin: 3px 0; }
+    .entry-desc { font-size: 13px; color: #555; margin-top: 5px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .skill-item { padding: 8px 12px; background: #f0f9ff; border-left: 3px solid #78e693; }
+    .skill-category { font-weight: 600; color: #00f7ff; font-size: 13px; }
+    .skill-list { font-size: 12px; color: #333; margin-top: 3px; }
+    ul { margin-left: 20px; font-size: 13px; color: #555; }
+    li { margin: 5px 0; }
+    .print-btn { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #00f7ff; color: #000; text-decoration: none; border-radius: 5px; font-weight: 600; cursor: pointer; border: none; font-size: 14px; }
+    .print-btn:hover { background: #78e693; }
+    @media print {
+      body { background: #fff; }
+      .resume-container { box-shadow: none; margin: 0; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button>
+    
+    <header>
+      <div class="name">BERYL</div>
+      <div class="title">Web Developer & IoT Enthusiast</div>
+      <div class="contact">
+        <div class="contact-item">📧 <a href="mailto:bihirwemugaba@gmail.com">bihirwemugaba@gmail.com</a></div>
+        <div class="contact-item">📱 0795726230</div>
+        <div class="contact-item">🌐 <a href="Portifolio.html">Portfolio</a></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Creative web developer with strong expertise in front-end design, PHP backend development, and IoT systems. Passionate about building clean, user-friendly interfaces combined with robust server-side logic. Proven track record of delivering projects on time with attention to detail and security best practices.</p>
+    </section>
+
+    <section>
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-category">Frontend</div>
+          <div class="skill-list">HTML5, CSS3, JavaScript, Responsive Design, Animations</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-category">Backend</div>
+          <div class="skill-list">PHP, MySQL, Database Design, CRUD Operations</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-category">IoT & Hardware</div>
+          <div class="skill-list">ESP32, ESP8266, MQTT, Embedded Systems, Microcontrollers</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-category">Tools & Platforms</div>
+          <div class="skill-list">Git, Apache, Nginx, Linux, VS Code</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+      
+      <div class="entry">
+        <div class="entry-title">IoT LED Control System</div>
+        <div class="entry-subtitle">ESP32 • MQTT • Wi-Fi</div>
+        <div class="entry-desc">Developed a remote LED control system using ESP microcontrollers and MQTT protocol. Includes secure Wi-Fi connectivity, real-time command handling, and comprehensive documentation with wiring diagrams and firmware examples.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">Database Web Application</div>
+        <div class="entry-subtitle">PHP • MySQL • Security</div>
+        <div class="entry-desc">Built a full-stack CRUD web app with PHP backend and MySQL database. Implemented secure practices including parameterized queries, input validation, and error handling. Includes schema design and deployment notes.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">Portfolio Website</div>
+        <div class="entry-subtitle">HTML • CSS • Responsive Design</div>
+        <div class="entry-desc">Designed and built this responsive portfolio site with smooth animations, project showcase, testimonials section, and integrated contact form with confirmation flow.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Expertise</h2>
+      <ul>
+        <li><strong>Web Development:</strong> Building responsive websites with modern HTML5, CSS3, and JavaScript; focus on user experience and accessibility.</li>
+        <li><strong>Backend Development:</strong> PHP scripting, database design and optimization, API development, secure authentication practices.</li>
+        <li><strong>IoT Systems:</strong> Microcontroller programming, sensor integration, wireless communication protocols (Wi-Fi, MQTT), embedded systems.</li>
+        <li><strong>Security:</strong> SQL injection prevention, XSS protection, secure credential management, data validation and sanitization.</li>
+        <li><strong>Problem Solving:</strong> Debugging complex issues, optimizing performance, scalable architecture design.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education & Certifications</h2>
+      <div class="entry">
+        <div class="entry-title">Web Development & IoT Specialization</div>
+        <div class="entry-subtitle">Self-taught & Online Courses</div>
+        <div class="entry-desc">Continuous learning in web technologies, embedded systems, and best practices through structured courses, tutorials, and hands-on projects.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How to Reach Me</h2>
+      <ul>
+        <li><strong>Email:</strong> bihirwemugaba@gmail.com (preferred contact method)</li>
+        <li><strong>Phone:</strong> 0795726230</li>
+        <li><strong>Portfolio:</strong> <a href="Portifolio.html">View my work and projects</a></li>
+        <li><strong>Response Time:</strong> 1-2 business days for inquiries</li>
+      </ul>
+    </section>
+
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #999; font-size: 12px;">
+      <p>© 2026 Beryl. Last updated: February 2026</p>
+    </footer>
+  </div>
+</body>
+</html>

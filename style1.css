@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(120deg, black, green, rebeccapurple);
+    overflow-x: hidden;
+}
+.nav-link{
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 32, 39, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 247, 255, 0.1);
+    animation: slideDown 0.8s ease;
+}
+.nav-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 10%;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #e7d5d5;
+    transition: 0.3s;
+}
+.nav-logo span {
+    color: #00f7ff;
+}
+.nav-logo:hover {
+    text-shadow: 0 0 20px #00f7ff;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+     gap: 30px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    position: relative;
+}
+.nav-link:hover {
+    color: #00f7ff;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+     left: 0;
+    width: 0;
+    height: 2px;
+    background: #00f7ff;
+    transition: width 0s ease;
+
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #00f7ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+.btn:hover {
+      background: transparent;
+      color: #00f7ff;
+      border: 2px solid #00f7ff;
+ 
+}
+

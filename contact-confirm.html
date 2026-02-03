@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank You - Message Received">
+    <title>Thank You - Message Received</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2a3a 50%, #0d3b66 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .confirm-container {
+            max-width: 600px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.05), rgba(120, 230, 147, 0.05));
+            border: 1px solid rgba(0, 247, 255, 0.2);
+            border-radius: 15px;
+            padding: 60px 40px;
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .confirm-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 0.6s ease-out;
+        }
+        @keyframes bounce {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .confirm-h1 {
+            background: linear-gradient(135deg, #78e693, #00f7ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        .confirm-p {
+            color: #ccc;
+            margin: 15px 0;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .confirm-info {
+            text-align: left;
+            background: rgba(0, 247, 255, 0.08);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #00f7ff;
+        }
+        .confirm-info p {
+            margin: 12px 0;
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+        .confirm-info strong {
+            color: #00f7ff;
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #00f7ff, #00d4cc);
+            color: #000;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 247, 255, 0.3);
+        }
+        .back-btn:active {
+            transform: translateY(-1px);
+        }
+        .checkmark {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00f7ff, #78e693);
+            position: relative;
+            margin: -10px auto 20px;
+        }
+        .checkmark::before {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 45px;
+            color: #000;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .confirm-container {
+                padding: 40px 25px;
+            }
+            .confirm-h1 {
+                font-size: 1.8rem;
+            }
+            .confirm-p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirm-container">
+        <div class="checkmark"></div>
+        <h1 class="confirm-h1">Thank You!</h1>
+        <p class="confirm-p">Your message has been received successfully.</p>
+        <p class="confirm-p">I appreciate you reaching out. I'll get back to you as soon as possible, typically within 24-48 hours.</p>
+        
+        <div class="confirm-info">
+            <p>
+                <strong>📧 What Happens Next?</strong>
+                I'll review your message and respond to your email with next steps or any questions I might have.
+            </p>
+            <p>
+                <strong>💬 Quick Response?</strong>
+                For urgent matters, feel free to reach out directly or check back on this portfolio for updates.
+            </p>
+            <p>
+                <strong>🎯 Let's Connect</strong>
+                In the meantime, feel free to explore more of my projects or follow me on social media.
+            </p>
+        </div>
+
+        <div id="message-info"></div>
+        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+    </div>
+
+    <script>
+        // Extract and display submitted form data if available
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const email = params.get('email');
+        const message = params.get('message');
+        
+        const infoDiv = document.getElementById('message-info');
+        if (name && email) {
+            infoDiv.innerHTML = `
+                <p><strong>👤 Name:</strong> ${escapeHtml(name)}</p>
+                <p><strong>📧 Email:</strong> ${escapeHtml(email)}</p>
+                <p><strong>💬 Message:</strong><br>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+            `;
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

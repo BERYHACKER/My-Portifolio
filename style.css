@@ -1,0 +1,550 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(120deg, #29290f, #273236, #78e693);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 32, 39, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 247, 255, 0.1);
+    animation: slideDown 0.8s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-logo span {
+    color: #00f7ff;
+}
+
+.nav-logo:hover {
+    text-shadow: 0 0 20px #00f7ff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #00f7ff;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00f7ff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* LOGO */
+.logo-container {
+    margin-bottom: 40px;
+    animation: bounceIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid #00f7ff;
+    object-fit: cover;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.5));
+    animation: photoGlow 3s ease-in-out infinite, float 6s ease-in-out infinite;
+    transition: transform 0.4s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 50px rgba(0, 247, 255, 0.8));
+}
+
+.beryl-logo {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.5));
+    animation: rotateLogo 20s linear infinite, glowPulse 3s ease-in-out infinite;
+}
+
+.logo-text {
+    font-size: 95px;
+    font-weight: 900;
+    fill: url(#gradientFill);
+    letter-spacing: 2px;
+    animation: logoGlow 2s ease-in-out infinite;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* HERO */
+.hero {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease;
+    padding: 0 10%;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero span {
+    color: #00f7ff;
+}
+
+.hero p {
+    margin: 15px 0 30px 0;
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 0.5s;
+    font-size: 1.1rem;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #00f7ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #00f7ff;
+    border: 2px solid #00f7ff;
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+    animation: fadeIn 1.5s ease;
+    }
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SKILLS */
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-box a {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.skill-box a:hover {
+    transform: translateY(-8px);
+}
+
+.skill-tag {
+    padding: 12px 25px;
+    border: 2px solid #00f7ff;
+    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+}
+
+.skill-box a:hover .skill-tag {
+    background: #00f7ff;
+    color: #000;
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 247, 255, 0.4);
+    text-shadow: none;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 247, 255, 0.6);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact-info {
+    margin: 30px 0;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #00f7ff;
+    font-size: 1.3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #00f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #00f7ff;
+    font-size: 1.3rem;
+    transition: all 0.4s ease;
+}
+
+.social-icon:hover {
+    background: #00f7ff;
+    color: #000;
+    transform: scale(1.15) rotate(360deg);
+    box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+}
+
+/* FOOTER */
+.footer {
+    background: rgba(15, 32, 39, 0.8);
+    padding: 30px 10%;
+    text-align: center;
+    border-top: 2px solid rgba(0, 247, 255, 0.3);
+    margin-top: 50px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateLogo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 50px rgba(0, 247, 255, 0.8));
+    }
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(0, 247, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(0, 247, 255, 1), 0 0 80px rgba(0, 247, 255, 0.6);
+    }
+}
+
+@keyframes photoGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 50px rgba(0, 247, 255, 0.8));
+    }
+}
+
+/* PROJECT LINK (button style inside project card) */
+.project-link {
+    display: inline-block;
+    padding: 14px 22px;
+    background: linear-gradient(90deg, #00f7ff, #78e693);
+    color: #012;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-link:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.25);
+}
+
+/* IoT example page layout */
+body.iot-example {
+    background: linear-gradient(120deg, #0b1320, #09202a);
+    color: #e6fdf5;
+}
+
+main.iot-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.03);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,247,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+header.iot-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.iot-back {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: transparent;
+    color: #00f7ff;
+    text-decoration: none;
+    border: 1px solid rgba(0,247,255,0.18);
+}
+.iot-back:hover {
+    background: rgba(0,247,255,0.06);
+    transform: translateY(-3px);
+}
+
+pre, code {
+    background: rgba(0,0,0,0.45);
+    color: #d1f7ea;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+    .hero-container { flex-direction: column; padding: 0 6%; }
+    .project-card { padding: 20px; }
+    main.iot-container { margin: 20px; padding: 20px; }
+}
+
+/* Project card & thumbnail */
+.project-thumb {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.project-card h3 { margin: 8px 0; color: #eafff6 }
+.project-desc { color: rgba(255,255,255,0.8); margin-bottom: 10px; }
+.project-tags span { display: inline-block; margin-right: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(0,247,255,0.04); color: #bfffe9; font-size: 0.85rem; }
+
+/* Testimonials */
+.testimonials { padding: 60px 10%; }
+.test-card { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; margin: 12px auto; max-width: 800px; }
+.quote { font-style: italic; color: #dfffea }
+.author { text-align: right; margin-top: 8px; color: #aef0d9 }
+
+/* Contact form */
+.contact-form { display:flex; flex-direction:column; gap:10px; max-width:480px; margin:12px auto 0; }
+.contact-form input, .contact-form textarea { padding: 10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background: rgba(0,0,0,0.35); color: #eafff8 }
+.contact-form button.btn { width:150px; }
+
+/* Resume nav link */
+.nav-menu a[href$="resume.pdf"] { background: linear-gradient(90deg,#00f7ff,#78e693); color:#012; padding:8px 12px; border-radius:10px }
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .skill-tag {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+ img
